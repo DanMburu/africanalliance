@@ -110,7 +110,7 @@ function registerEvents(chatHub) {
 function registerClientMethods(chatHub) {
 	// Create a function that the hub can call to broadcast messages.
 	chatHub.client.broadcastMessage = function (server_id,name,subject,time, message) {
-       alert('broadcastMessage-'+message);
+      
 	   
 		 var now  = moment().format("Do MMM YY, h:mm a");  
 		 msg='<li class="col-sm-12 col-xs-12 wow fadeInDown" data-wow-duration="1200ms"data-wow-delay="1200ms">';
@@ -161,9 +161,7 @@ function registerClientMethods(chatHub) {
           saveMessage(sender, time, message);  
 		   localNotificationMessage(sender,message);
        }
-   chatHub.client.broadcastMessage = function(name, message) {
-      alert(message);
-   };
+  
 
  }
     
