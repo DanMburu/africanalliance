@@ -121,7 +121,16 @@ var now = new Date().getTime();
     });
 	 
 }
-
+function notificationPermission() {
+    if (device.platform.toLowerCase() === "ios") {
+        if (other) {
+            cordova.plugins.notification.local.registerPermission();
+        }
+        else {
+            window.plugin.notification.local.promptForPermission();
+        }
+    }
+}
 function localNotification(name,subject,time, message){
 	
 /*:::::::::::::::::::::::::::::::::::::::::*/
