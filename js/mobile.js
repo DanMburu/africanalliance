@@ -306,6 +306,7 @@ sql = "DROP TABLE IF EXISTS aa_speakers_profile";
 		"sector VARCHAR(200), " +
 		"company VARCHAR(200), " +
 		"photo VARCHAR(200), " +
+		"thumb VARCHAR(200), " +
 		"description VARCHAR(5000) " +
 		
 		")";    
@@ -646,7 +647,7 @@ db.transaction(function(transaction) {
 			
 			var item ='<li>';
 			item+='  <a onclick="GeProfileOne('+row.id+')" href="#speaker-profile" data-transition="flip">';
-			item+='	 <span class="speakerprofilepic"><img src="'+$('#SITEURL').val()+'images/speakers/thumb-'+row.photo+'" width="65px" height="65px" class="img-circle"></span>';
+			item+='	 <span class="speakerprofilepic"><img src="'+row.thumb+'" width="65px" height="65px" class="img-circle"></span>';
 			item+='	 <span class="speakerlist">';
 			item+='		<h2 class="speakername">'+row.name+'</h2>';
 			item+='		<p class="speakertitle">'+row.title+', '+row.company+'</p>';
@@ -703,7 +704,7 @@ db.transaction(function(transaction) {
 			var item='<div class="col-sm-12 col-xs-12 maincols nopadding">';
 			
 			item+='	<div class="profile-picture">';
-			item+='	   <img src="images/speakers/'+row.photo+'" class="center-block img-responsive"> ';
+			item+='	   <img src="'+row.photo+'" class="center-block img-responsive"> ';
 			item+='	   <div class="layer"></div>';
 			item+='	   <div class="imagedetails">';
 			item+='		  <h2 class="text-center center-block">'+row.name+'</h2>';
