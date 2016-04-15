@@ -122,8 +122,6 @@ var now = new Date().getTime();
 	 
 }
 
-
-
 function localNotification(name,subject,time, message){
 	
 /*:::::::::::::::::::::::::::::::::::::::::*/

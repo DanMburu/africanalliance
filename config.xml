@@ -72,8 +72,7 @@
 	<icon src="images/icon-50.png" gap:platform="ios" width="50" height="50" />
 	<icon src="images/icon-100.png" gap:platform="ios" width="100" height="100" />
 
-
-	
+		<!-- iPhone and iPod touch -->
 		<!-- iPhone and iPod touch -->
 		<gap:splash src="splash.png" gap:platform="ios" width="320" height="480" />
 		<gap:splash src="images/splash/640x960.png" gap:platform="ios" width="640" height="960" />
@@ -88,9 +87,6 @@
 		<!-- iPad -->
 		<gap:splash src="images/splash/768x1024.png" gap:platform="ios" width="768" height="1024" />
 
-	
-
-
-  <plugin name="de.appplant.cordova.plugin.local-notification" source="pgb"  />
+	     <plugin name="de.appplant.cordova.plugin.local-notification" source="pgb"  />
   <!--  <gap:plugin name="com.footprint.cordova.plugin.local-notification" version="0.8.0" />-->
 </widget>
