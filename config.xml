@@ -3,7 +3,7 @@
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.africanallianceconferences.app" 
 	   versionCode= "15"
-       version = "1.0.0">
+       version = "2.0.0">
 		
     <name>African Alliance</name>
 
@@ -22,6 +22,7 @@
 	<feature name="Notification">
         <param name="android-package" value="org.apache.cordova.dialogs.Notification" />
    </feature>
+   <preference name="phonegap-version" value="3.7.0" /> 
     <preference name="orientation"      value="default" />
     <preference name="target-device"    value="universal" />
     <preference name="fullscreen"       value="false" />
