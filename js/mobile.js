@@ -66,7 +66,7 @@ window.plugin.notification.local.onclick = function (nId, state, json) {$('.lnkn
    db = window.openDatabase("AfricanAllianceDB", "1.0", "PhoneGap Demo", 200000);
     
 	var firstrun = window.localStorage.getItem("runned");
-	    firstrun = null;
+	   
 	if ( firstrun == null ) {
 
 		$('.continuebtn').attr('href','#login');
