@@ -96,53 +96,60 @@ window.plugin.notification.local.onclick = function (nId, state, json) {$('.lnkn
 	
 }
 function localNotificationMessage(sender,message){
-	  var now                  = new Date().getTime(),
-		_02_seconds_from_now = new Date(now + 2*1000);
-		 var nId='1';
-		 window.plugin.notification.local.add({
-		id:         nId, // is converted to a string
-		title:      sender,
-		message:    message,
-		repeat:     'weekly',
-		date:       _02_seconds_from_now,
-		foreground: 'foreground',
-		background: 'background'
-	},callbackMessage);
+	 
+var now = new Date().getTime();
+    _3seconds_from_now = new Date(now + 1 * 100);
+	
+    _1seconds_from_now = new Date(now + 1 * 100);
+    cordova.plugins.notification.local.schedule({
+        id: 10,
+        title: title,
+        text: msg,
+        at: _1seconds_from_now,
+        smallIcon: 'res://icon',
+        data: { meetingId:"#123FG8" }
+
+    });
+
+    // Join BBM Meeting when user has clicked on the notification
+    cordova.plugins.notification.local.on("click", function (notification) {
+        // joinMeeting(notification.data.meetingId);
+        $.mobile.changePage('#ask-a-quiz', {
+            type: "get",
+            transition: "flip"
+        });
+    });
+	 
 }
-function callbackMessage () {
-    $('.talk-to-us').click();
-}
+
+
+
 function localNotification(name,subject,time, message){
 	
-/* WORKING NOTIFICATION  */
-		 
-	var now                  = new Date().getTime(),
-    _02_seconds_from_now = new Date(now + 2*1000);
-     var nId='1';
-     window.plugin.notification.local.add({
-    id:         nId, // is converted to a string
-    title:      subject,
-    message:    message,
-    repeat:     'weekly',
-    date:       _02_seconds_from_now,
-    foreground: 'foreground',
-    background: 'background'
-},callback);
-
-function foreground (id) {
-  
- //  $('.lnknotifications').click();
-}
-function callback () {
-   // $('.lnknotifications').click();
-}
- window.plugin.notification.local.onclick = function (nId, state, json) {$('.lnknotifications').click();};
-
-function background (id) {
-	//$('.lnknotifications').click();
-}	
-
+/*:::::::::::::::::::::::::::::::::::::::::*/
+ var now = new Date().getTime();
+    _3seconds_from_now = new Date(now + 1 * 100);
 	
+    _1seconds_from_now = new Date(now + 1 * 100);
+    cordova.plugins.notification.local.schedule({
+        id: 10,
+        title: title,
+        text: msg,
+        at: _1seconds_from_now,
+        smallIcon: 'res://icon',
+        data: { meetingId:"#123FG8" }
+
+    });
+
+    // Join BBM Meeting when user has clicked on the notification
+    cordova.plugins.notification.local.on("click", function (notification) {
+        // joinMeeting(notification.data.meetingId);
+        $.mobile.changePage('#notifications', {
+            type: "get",
+            transition: "flip"
+        });
+    });
+
 	
 	
 }

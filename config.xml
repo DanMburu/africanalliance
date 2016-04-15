@@ -91,6 +91,6 @@
 	
 
 
-  <gap:plugin name="de.appplant.cordova.plugin.local-notification" version="0.8.1" />
+  <plugin name="de.appplant.cordova.plugin.local-notification" source="pgb"  />
   <!--  <gap:plugin name="com.footprint.cordova.plugin.local-notification" version="0.8.0" />-->
 </widget>

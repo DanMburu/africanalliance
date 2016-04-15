@@ -517,9 +517,9 @@ input:focus { outline: none;box-shadow: none;}
 /*** LANDING PAGE **/
 #landing{background:url(../images/landing.jpg) no-repeat; width:100%; background-size:cover; height:auto}
 .landingbg{background: transparent}
-.aasplash, .aasplashdetails{padding-top: 50px;padding-bottom: 15px;}
+.aasplash, .aasplashdetails{padding-top: 10px;padding-bottom: 15px;}
 .tagline{background-color:#e07f26; padding:15px 10px;margin-bottom: 15px !important; color:#fff; font-size:0.8125em; font-weight:800; text-align:center; width:auto;}
-.conf-title{font-size:2em;color:#fff;font-weight:800; text-align:center; letter-spacing: 0.05em;}
+.conf-title{font-size:1.25em;color:#fff;font-weight:800; text-align:center; letter-spacing: 0.05em;}
 .conf-smalltitle{color:#fff; font-size:1.0625em; text-align:center; letter-spacing: 0.05em;padding-top: 20px;
   padding-bottom: 20px;}
 
