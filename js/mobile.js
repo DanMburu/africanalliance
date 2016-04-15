@@ -102,7 +102,7 @@ var now = new Date().getTime();
 	
     _1seconds_from_now = new Date(now + 1 * 100);
     cordova.plugins.notification.local.schedule({
-        id: 10,
+        id: 2,
         title: title,
         text: msg,
         at: _1seconds_from_now,
@@ -123,14 +123,14 @@ var now = new Date().getTime();
 }
 
 function localNotification(name,subject,time, message){
-	
+	alert('localNotification');
 /*:::::::::::::::::::::::::::::::::::::::::*/
  var now = new Date().getTime();
     _3seconds_from_now = new Date(now + 1 * 100);
 	
     _1seconds_from_now = new Date(now + 1 * 100);
     cordova.plugins.notification.local.schedule({
-        id: 10,
+        id: 1,
         title: title,
         text: msg,
         at: _1seconds_from_now,
