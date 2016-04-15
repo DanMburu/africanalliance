@@ -98,9 +98,9 @@ window.plugin.notification.local.onclick = function (nId, state, json) {$('.lnkn
 function localNotificationMessage(sender,message){
 	 
 var now = new Date().getTime();
-    _3seconds_from_now = new Date(now + 1 * 100);
+   
 	
-    _1seconds_from_now = new Date(now + 1 * 100);
+    _1seconds_from_now = new Date(now + 1 * 1000);
     cordova.plugins.notification.local.schedule({
         id: 2,
         title: sender,
@@ -126,9 +126,9 @@ function localNotification(name,subject,time, message){
 	
 /*:::::::::::::::::::::::::::::::::::::::::*/
  var now = new Date().getTime();
-    _3seconds_from_now = new Date(now + 1 * 100);
+   
 	
-    _1seconds_from_now = new Date(now + 1 * 100);
+    _1seconds_from_now = new Date(now + 1 * 1000);
     cordova.plugins.notification.local.schedule({
         id: 1,
         title: subject,
