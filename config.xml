@@ -2,7 +2,7 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.africanallianceconferences.app" 
-	   versionCode= "15"
+	   versionCode= "16"
        version = "2.0.0">
 		
     <name>African Alliance</name>
@@ -96,8 +96,5 @@
 		 <!--<gap:pluginname="de.appplant.cordova.plugin.local-notification-ios9-fix" version="0.8.2" />
          <!--  <gap:plugin name="com.footprint.cordova.plugin.local-notification" version="0.8.0" />
   -->
-  
-  
-  
   
 </widget>
