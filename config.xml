@@ -3,7 +3,7 @@
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.africanallianceconferences.app" 
 	   versionCode= "16"
-       version = "2.0.0">
+       version = "2.1.0">
 		
     <name>African Alliance</name>
 
@@ -13,11 +13,9 @@
 
     <author href="http:creativeyr.co.ke" email="d.mburu@creative.co.ke">
         Dan Mburu
-    </author>
-    
+    </author>    
     <access origin="*" />
-	
-	
+		
 	<feature name="http://api.phonegap.com/1.0/network"/>
 	<feature name="Notification">
         <param name="android-package" value="org.apache.cordova.dialogs.Notification" />
