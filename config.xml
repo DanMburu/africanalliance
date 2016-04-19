@@ -2,7 +2,7 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.africanallianceconferences.app" 
-	   versionCode= "15"
+	   versionCode= "16"
        version = "1.0.0">
 		
     <name>African Alliance</name>
@@ -83,13 +83,7 @@
 		<!-- iPhone 6 -->
 		<gap:splash src="images/splash/750x1334.png" gap:platform="ios" width="750" height="1334" />
 		
-
 		<!-- iPad -->
 		<gap:splash src="images/splash/768x1024.png" gap:platform="ios" width="768" height="1024" />
-
-	
-
-
-  <gap:plugin name="de.appplant.cordova.plugin.local-notification" version="0.8.1" />
-  <!--  <gap:plugin name="com.footprint.cordova.plugin.local-notification" version="0.8.0" />-->
+        <plugin name="de.appplant.cordova.plugin.local-notification" source="pgb"  />
 </widget>
