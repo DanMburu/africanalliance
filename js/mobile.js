@@ -761,19 +761,20 @@ db.transaction(function(transaction) {
 		//alert(ids);
 		
    var url=$('#rooturl').val()+'Init/Notifications/'+ids;
-
+	    console.log(url);
    	$.get( url, function( data ) {
 		//Begin
-		
-		db.transaction(
-		  function(tx) { 
-				tx.executeSql(data);
-			
-				//Add Notifications
-		  },
-		  	function(error){console.log(error);}
-		  );
-		//END
+	       if (data !== 'none') {
+	           db.transaction(
+	               function(tx) {
+	                   tx.executeSql(data);
+
+	                   //Add Notifications
+	               },
+	               function(error) { console.log(error); }
+	           );
+	       }
+	       //END
 		//ADD Notifications
 
 	db.transaction(function(transaction) {
