@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "com.africanallianceconferences.app" 
-	   versionCode= "16"
-       version = "2.0">
+        id        = "com.phonegap.itime" 
+	   versionCode= "1"
+       version = "1.0.0">
 		
-    <name>African Alliance</name>
+    <name>iTime</name>
 
     <description>
-	African Alliance Conferences
+	Buy and Sell Airtime, a good way to make some extra cash.
     </description>
 
-    <author href="http:creativeyr.co.ke" email="d.mburu@creative.co.ke">
-        Dan Mburu
+    <author href="http://kendevs.com" email="dmgitau@gmail.com">
+        Daniel Mburu
     </author>
     
     <access origin="*" />
@@ -22,79 +22,16 @@
 	<feature name="Notification">
         <param name="android-package" value="org.apache.cordova.dialogs.Notification" />
    </feature>
-   <preference name="phonegap-version" value="3.7.0" /> 
     <preference name="orientation"      value="default" />
     <preference name="target-device"    value="universal" />
     <preference name="fullscreen"       value="false" />
     <preference name="show-splash-screen-spinner" value="true" />
-	<gap:splash src="splash.png" />
-   
     <icon src="icon.png" />
-    <icon src="images/icon-36.png"   gap:platform="android"    gap:density="ldpi" />
-    <icon src="images/icon-48.png"   gap:platform="android"    gap:density="mdpi" />
-    <icon src="images/icon-72.png"   gap:platform="android"    gap:density="hdpi" />
-    <icon src="images/icon-96.png"  gap:platform="android"    gap:density="xhdpi" />
-	
-	<!-- iPhone 6 / 6+ -->
-	<icon src="images/icon-180.png" gap:platform="ios" width="180" height="180" />
+    <icon src="themes/images/icon-36.png"   gap:platform="android"    gap:density="ldpi" />
+    <icon src="themes/images/icon-48.png"   gap:platform="android"    gap:density="mdpi" />
+    <icon src="themes/images/icon-72.png"   gap:platform="android"    gap:density="hdpi" />
+    <icon src="themes/images/icon-96.png"  gap:platform="android"    gap:density="xhdpi" />
+
 	
 
-	<!-- iPhone / iPod Touch  -->
-	<icon src="images/icon-60.png" gap:platform="ios" width="60" height="60" />
-	<icon src="images/icon-120.png" gap:platform="ios" width="120" height="120" />
-
-	<!-- iPad -->
-	<icon src="images/icon-76.png" gap:platform="ios" width="76" height="76" />
-	<icon src="images/icon-152.png" gap:platform="ios" width="152" height="152" />
-
-	<!-- Settings Icon -->
-	<icon src="images/icon-29.png" gap:platform="ios" width="29" height="29" />
-	<icon src="images/icon-58.png" gap:platform="ios" width="58" height="58" />
-
-	<!-- Spotlight Icon -->
-	<icon src="images/icon-40.png" gap:platform="ios" width="40" height="40" />
-	<icon src="images/icon-80.png" gap:platform="ios" width="80" height="80" />
-	
-	
-	<!-- iPhone / iPod Touch -->
-	<icon src="images/icon-57.png" gap:platform="ios" width="57" height="57" />
-	<icon src="images/icon-114.png" gap:platform="ios" width="114" height="114" />
-
-	<!-- iPad -->
-	<icon src="images/icon-72.png" gap:platform="ios" width="72" height="72" />
-	<icon src="images/icon-144.png" gap:platform="ios" width="144" height="144" />
-
-	<!-- iPhone Spotlight and Settings Icon -->
-	<icon src="images/icon-29.png" gap:platform="ios" width="29" height="29" />
-	<icon src="images/icon-58.png" gap:platform="ios" width="58" height="58" />
-
-	<!-- iPad Spotlight and Settings Icon -->
-	<icon src="images/icon-50.png" gap:platform="ios" width="50" height="50" />
-	<icon src="images/icon-100.png" gap:platform="ios" width="100" height="100" />
-
-		<!-- iPhone and iPod touch -->
-		<!-- iPhone and iPod touch -->
-		<gap:splash src="splash.png" gap:platform="ios" width="320" height="480" />
-		<gap:splash src="images/splash/640x960.png" gap:platform="ios" width="640" height="960" />
-
-		<!-- iPhone 5 / iPod Touch (5th Generation) -->
-		<gap:splash src="images/splash/640x1136.png" gap:platform="ios" width="640" height="1136" />
-
-		<!-- iPhone 6 -->
-		<gap:splash src="images/splash/750x1334.png" gap:platform="ios" width="750" height="1334" />
-		
-
-		<!-- iPad -->
-		<gap:splash src="images/splash/768x1024.png" gap:platform="ios" width="768" height="1024" />
-
-	     <plugin name="de.appplant.cordova.plugin.local-notification" source="pgb"  />
-  <!--  <gap:plugin name="com.footprint.cordova.plugin.local-notification" version="0.8.0" />
-  
- <plugin name="de.appplant.cordova.plugin.local-notification" source="pgb"  />
-		 
-		 <gap:plugin name="cordova-plugin-local-notifications-mm" source="npm" />
-		 <!--<gap:pluginname="de.appplant.cordova.plugin.local-notification-ios9-fix" version="0.8.2" />
-         <!--  <gap:plugin name="com.footprint.cordova.plugin.local-notification" version="0.8.0" />
-  -->
-  
 </widget>
