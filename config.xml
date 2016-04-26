@@ -84,5 +84,7 @@
 		
 		<!-- iPad -->
 		<gap:splash src="images/splash/768x1024.png" gap:platform="ios" width="768" height="1024" />
-        <plugin name="de.appplant.cordova.plugin.local-notification" source="pgb"  />
+		
+        <gap:pluginname="de.appplant.cordova.plugin.local-notification-ios9-fix" version="0.8.2" />
+		
 </widget>
