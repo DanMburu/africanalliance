@@ -88,15 +88,7 @@
 
 		<!-- iPad -->
 		<gap:splash src="images/splash/768x1024.png" gap:platform="ios" width="768" height="1024" />
-  <!--
-	 <plugin name="de.appplant.cordova.plugin.local-notification" source="pgb"  />
-  <gap:plugin name="com.footprint.cordova.plugin.local-notification" version="0.8.0" />
-  
- <plugin name="de.appplant.cordova.plugin.local-notification" source="pgb"  />
-		 
-		 <gap:plugin name="cordova-plugin-local-notifications-mm" source="npm" />
-		 <!--<gap:pluginname="de.appplant.cordova.plugin.local-notification-ios9-fix" version="0.8.2" />
-         <!--  <gap:plugin name="com.footprint.cordova.plugin.local-notification" version="0.8.0" />
-  -->
+
+	
 
 </widget>
