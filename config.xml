@@ -31,8 +31,7 @@
     <preference name="show-splash-screen-spinner" value="true" />
 	<gap:splash src="splash.png" />
 	
-	 <plugin name="de.appplant.cordova.plugin.local-notification" source="pgb"  />
-	 <gap:pluginname="de.appplant.cordova.plugin.local-notification-ios9-fix" />
+    <plugin name="de.appplant.cordova.plugin.local-notification-ios9-fix" spec="0.8.2" source="pgb" />
 	
 	 <icon src="icon.png" />
     <icon src="images/icon-36.png"   gap:platform="android"    gap:density="ldpi" />
