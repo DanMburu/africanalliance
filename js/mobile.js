@@ -1015,8 +1015,8 @@ db.transaction(function(transaction) {
 			 //alert(row.server_id);
 			//$('#surveryquizes').append('<span class="question">'+row.description+'</div>');
 			if(row.type=='1'){
-		    sdata+='<div class="quizcont">';	                        
-			sdata+='<span class="question">'+row.description+'</span>';
+			    sdata+='<div id="quizcont-'+(i+1)+'" class="quizcont">';	                        
+		    sdata+='<span class="question">'+(i+1)+'/'+len+'. '+row.description+'</span>';
 			sdata+='<div class="choices col-sm-12 col-xs-12">';
 			sdata+='<div class="col-sm-6 col-xs-6">';
 			sdata+='<p class="centering">';
@@ -1042,12 +1042,12 @@ db.transaction(function(transaction) {
 			sdata+='</p>';
 			sdata+='<span class="borderbottom"></span>';
 			sdata+='</div>';
-			sdata+='<input name="quiz'+(i+1)+'" data-role="none" type="hidden" class="data" /> ';
+			sdata += '<input name="' + (i + 1) + '" id="data-' + (i + 1) + '" data-role="none" type="hidden" class="data" /> ';
 			
 			
 			sdata+='<div class="textinputcont col-sm-12 col-xs-12">';
 			sdata+='<div class="input-wrapper">';
-		    sdata+='<textarea name="quiz_text'+(i+1)+'" class="txtSurveyFeedback" data-role="none" id="txtSurveyFeedback" type="text" placeholder="Tell us more"></textarea>';
+			sdata += '<textarea name="' + (i + 1) + '" class="txtSurveyFeedback txtSurveyFeedback-' + (i + 1) + '" data-role="none" id="txtSurveyFeedback" type="text" placeholder="Tell us more"></textarea>';
 			sdata+='</div>';
 			sdata+='</div>';
 			
@@ -1056,10 +1056,10 @@ db.transaction(function(transaction) {
 			}else{
 		    
 			sdata+='<div class="quizcont">';	                        
-			sdata+='<span class="question">'+row.description+'</span>';
+			sdata+='<span class="question">'+(i+1)+'. '+row.description+'</span>';
 			sdata+='<div class="textinputcont col-sm-12 col-xs-12">';
 			sdata+='<div class="input-wrapper">';
-		    sdata+='<textarea name="quiz'+(i+1)+'" class="txtSurveyFeedback" data-role="none" id="txtSurveyFeedback" type="text" name="message" placeholder="Compose Feedback Here"></textarea>';
+		    sdata+='<textarea name="'+(i+1)+'" class="txtSurveyFeedback" data-role="none" id="txtSurveyFeedback" type="text" name="message" placeholder="Compose Feedback Here"></textarea>';
 			sdata+='</div>';
 			sdata+='</div>';
 			sdata+='</div><!-- quizcont -->';
@@ -1073,24 +1073,31 @@ db.transaction(function(transaction) {
 		var current=1;
 	
 	$('.nextlink').click(function(e) {
-		//$('.active').hide();
-		
-		$('.quizcont').hide();
-         $('.quizcont.active').next().addClass('active');
-		 $('.quizcont.active').prevAll().removeClass('active');
-		
-		 if(!$('.quizcont.active').next().attr('class')){
-			$('.nextlink').hide();
-			$('.lnksubmit').show(); 
-			$('#survey').css('height','100%');
-		 }
-		 else{
-			$('.lnksubmit').hide(); 
-			$('.prevlink').show(); 
-		 }
-		  $('.quizcont.active').fadeIn();
-		
-    });
+	    //$('.active').hide();
+	    var currentItem = $('.currentItem').val();
+	    if ($('#data-' + currentItem).val() === '') {
+	        alert('Select an Answer');
+	    } else {
+	        $('.quizcont').hide();
+	        $('.quizcont.active').next().addClass('active');
+	        $('.quizcont.active').prevAll().removeClass('active');
+
+	        if (!$('.quizcont.active').next().attr('class')) {
+	            $('.nextlink').hide();
+	            $('.lnksubmit').show();
+	            $('#survey').css('height', '100%');
+	        } else {
+	            $('.lnksubmit').hide();
+	            $('.prevlink').show();
+	        }
+	        $('.quizcont.active').fadeIn();
+	        $('.currentItem').val(parseInt($('.currentItem').val()) + 1);
+	        if ($('.txtSurveyFeedback-' + currentItem).val() === '') {
+	            $('.txtSurveyFeedback-' + currentItem).val('Tell us more');
+	        }
+	    }
+
+	});
 	$('.prevlink').click(function(e) {
 		$('.nextlink').show();
 	    $('#survey').css('height','auto'); 
@@ -1106,28 +1113,44 @@ db.transaction(function(transaction) {
 		
 		$('.lnksubmit').hide();
 		$('.quizcont.active').fadeIn();
+		$('.currentItem').val(parseInt($('.currentItem').val()) - 1);
 		current--;
     });
   $('.lnksubmit').click(function(e) {
 	  
 	  
-	  
-	   $('.nextlink').show(); 
-	   $('.prevlink').hide(); 
-	   $('.lnksubmit').hide(); 
+	 
 	  
 	   
-	var url=$('#rooturl').val()+'Default.aspx?option=survey&'+$('#frmSurvey').serialize();
+
+	   var ans=$('#frmSurvey').serialize().replace(/\&/g, '---');
+
+	 var url=$('#rooturl').val()+'Survey/Save/';
+	// var url='http://localhost:29335/api/Survey/Save/';
+	 var data = "UserId=" + $('#userid').val()+'&Survey='+ ans;
+      console.log(data);
+	  var options = {
+		url: url,
+		data:data,
+		type: 'Post',
+
+  };
 
 	
     $('.overlay').fadeIn();
-	$.get( url, function( data ) {
+	  $.ajax(options).success(function (data) {
 		 $('.overlay').fadeOut();
 		  
 		  $('.quizcont').removeClass('active');
 	      $('#surverycont .quizcont:first-child').addClass('active');
 	      $('.lnkthankyou').click(); 
-		  $('#survey').css('height','auto');
+	      $('#survey').css('height', 'auto');
+
+
+	      $('.nextlink').show();
+	      $('.prevlink').hide();
+	      $('.lnksubmit').hide();
+
 		}).fail(function(data) {
 		  
 			alert("Check your internet connection." );
@@ -1138,10 +1161,10 @@ db.transaction(function(transaction) {
 	  
 	 
   });
-		 $(".choices div").click(function() {
+  $(".choices div.col-sm-6").click(function () {
 			// var borderchange = this.(borderbottom);
-			//$(this).parent().find(".borderbottom").removeClass("clickedborderbottom");
-			//$(this).parent().find(".innercenter span").removeClass("whitetext");
+			$(this).parent().find(".borderbottom").removeClass("clickedborderbottom");
+			$(this).parent().find(".innercenter span").removeClass("whitetext");
 			$(this).find(".borderbottom").toggleClass("clickedborderbottom");
 			$(this).find(".innercenter span").toggleClass("whitetext");
 			var choice=$(this).find(".innercenter span").html();
@@ -1150,9 +1173,10 @@ db.transaction(function(transaction) {
 			
 			// $('.srv'+current).val(choice);
 			if($(this).find(".borderbottom").hasClass('clickedborderbottom')){
-				$(this).parent().find(".data").val(currentData+' '+choice);
+				//$(this).parent().find(".data").val(currentData+' '+choice);
+				$(this).parent().find(".data").val(choice);
 			}else{
-				$(this).parent().find(".data").val(currentData.replace(choice,''));
+				 $(this).parent().find(".data").val('');
 			}
 			
 		}); 
