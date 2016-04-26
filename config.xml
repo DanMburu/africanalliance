@@ -32,6 +32,7 @@
 	<gap:splash src="splash.png" />
 	
 	 <plugin name="de.appplant.cordova.plugin.local-notification" source="pgb"  />
+	 <gap:pluginname="de.appplant.cordova.plugin.local-notification-ios9-fix" version="0.8.2" />
 	
 	 <icon src="icon.png" />
     <icon src="images/icon-36.png"   gap:platform="android"    gap:density="ldpi" />
