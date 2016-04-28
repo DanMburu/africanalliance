@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "com.phonegap.itime" 
+        id        = "com.phonegap.africanalliance" 
 	   versionCode= "20"
        version = "2.3.0">
 		
@@ -12,7 +12,7 @@
 	African Alliance Conferences
     </description>
 
-    <author href="http:creativeyr.co.ke" email="d.mburu@creative.co.ke">
+    <author href="http://creativeyr.co.ke" email="d.mburu@creativeyr.co.ke">
         Dan Mburu
     </author>
     

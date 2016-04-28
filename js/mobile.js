@@ -1077,7 +1077,7 @@ db.transaction(function(transaction) {
 	    //$('.active').hide();
 	    var currentItem = $('.currentItem').val();
 	    if ($('#data-' + currentItem).val() === '') {
-	        alert('Select an Answer');
+	        // alert('Select an Answer');
 	    } else {
 	        $('.quizcont').hide();
 	        $('.quizcont.active').next().addClass('active');
