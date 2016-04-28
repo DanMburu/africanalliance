@@ -2,7 +2,6 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.phonegap.aa" 
-		package= "com.phonegap.aa"
 	   versionCode= "20"
        version = "2.3.0">
 		
