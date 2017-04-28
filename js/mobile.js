@@ -1022,7 +1022,7 @@ db.transaction(function(transaction) {
 	    //$('.active').hide();
 	    var currentItem = $('.currentItem').val();
 	    if ($('#data-' + currentItem).val() === '') {
-	         alert('Select an Answer');
+	         alert('Please select an Answer to continue.');
 	    } else {
 	        $('.quizcont').hide();
 	        $('.quizcont.active').next().addClass('active');
