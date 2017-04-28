@@ -3,7 +3,7 @@
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.phonegap.africanalliance"
 	   versionCode= "21"
-       version = "3.0.0">
+       version = "3.1.0">
     <name>African Alliance</name>
     <description>
 	African Alliance Conferences
